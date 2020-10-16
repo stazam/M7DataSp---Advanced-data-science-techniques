@@ -6,3 +6,4 @@ Main scripts:
 - HousePricesAll.csv - merged data into one file
 - FirstModel.h5 - saved model with counted weights
 - Exploratoryanalysis - quick look at the data.
+- HousePricesUpdated - jupyter notebook, based on HousePrices with some changes
