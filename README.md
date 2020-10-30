@@ -1,5 +1,5 @@
 ## M7DataSp---Advanced-data-science-techniques
-Repo for first project for subject M7DataSp
+Repo for projects to subject M7DataSp.
 
 # Exercise 1
 
