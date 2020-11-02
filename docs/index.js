@@ -24,10 +24,10 @@ async function app() {
   var pred = document.getElementById('pred');
   if (inline < 0.5) {
       prob = ((1-inline)*100).toFixed(2);
-      pred.innerHTML = "<b>Quads skates probability</b> (probability=".concat(prob, "%)");
+      pred.innerHTML = "<b>Quads skates</b> (probability=".concat(prob, "%)");
   } else {
     prob = (inline*100).toFixed(2);
-    pred.innerHTML = "<b>Inline skates probability</b> (probability=".concat(prob, "%)");
+    pred.innerHTML = "<b>Inline skates</b> (probability=".concat(prob, "%)");
   }
 
   return(p_cat);
