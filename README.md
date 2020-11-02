@@ -22,3 +22,9 @@ Main scripts:
 
 Main scripts: 
 - cvičenie3_update.ipnyb
+
+# Exercise 3
+
+## Prepare online application with usage of CNN
+
+- CNN for giving a difference between inline and quad roller skates - https://stazam.github.io/M7DataSp---Advanced-data-science-techniques/
