@@ -30,7 +30,7 @@ async function app() {
     pred.innerHTML = "<b>Inline</b> (probability=".concat(prob, "%)");
   }
 
-  return(p_cat);
+  return(prob);
 }
 
 app();
