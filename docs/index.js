@@ -2,7 +2,7 @@ let net;
 
 function preprocessImage(image) {
 	let tensor = tf.browser.fromPixels(image)
-		.resizeNearestNeighbor([160, 160])
+        .resizeNearestNeighbor([160, 160])
 		.toFloat();
 	return tensor.div(255)
 			.expandDims();
@@ -12,21 +12,21 @@ async function app() {
   console.log('Loading mobilenet..');
 
   // Load the model.
-  net = await tf.loadLayersModel('https://raw.githubusercontent.com/simecek/dspracticum2020/master/docs/export_model/model.json');
+  net = await tf.loadLayersModel('https://stazam.github.io/M7DataSp---Advanced-data-science-techniques/docs/export_model/model.json');
   console.log('Successfully loaded model');
 
   // Make a prediction through the model on our image.
   const imgEl = document.getElementById('img');
   const result = await net.predict(preprocessImage(imgEl));
-  const p_cat = result.dataSync()[0];
+  const inline = result.dataSync()[0];
   console.log('Prediction done');
 
   var pred = document.getElementById('pred');
-  if (p_cat < 0.5) {
-      prob = ((1-p_cat)*100).toFixed(2);
+  if (inline < 0.5) {
+      prob = ((1-inline)*100).toFixed(2);
       pred.innerHTML = "<b>Dog</b> (probability=".concat(prob, "%)");
   } else {
-    prob = (p_cat*100).toFixed(2);
+    prob = (inline*100).toFixed(2);
     pred.innerHTML = "<b>Cat</b> (probability=".concat(prob, "%)");
   }
 
