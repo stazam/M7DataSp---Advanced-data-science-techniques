@@ -18,19 +18,19 @@ async function app() {
   // Make a prediction through the model on our image.
   const imgEl = document.getElementById('img');
   const result = await net.predict(preprocessImage(imgEl));
-  const p_cat = result.dataSync()[0];
+  const inline = result.dataSync()[0];
   console.log('Prediction done');
 
   var pred = document.getElementById('pred');
-  if (p_cat < 0.5) {
-      prob = ((1-p_cat)*100).toFixed(2);
+  if (inline < 0.5) {
+      prob = ((1-inline)*100).toFixed(2);
       pred.innerHTML = "<b>Quad skates</b> (probability=".concat(prob, "%)");
   } else {
-    prob = (p_cat*100).toFixed(2);
+    prob = (inline*100).toFixed(2);
     pred.innerHTML = "<b>Inline skates</b> (probability=".concat(prob, "%)");
   }
 
-  return(p_cat);
+  return(inline);
 }
 
 app();
